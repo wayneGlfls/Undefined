@@ -1,0 +1,19 @@
+<template>
+
+    <template if:true={CDs.data}>
+    <lightning-card title="Content Deliveries" icon-name="custom:custom63">
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={CDs.data}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>  
+        </lightning-card> 
+    </template>
+
+    <template if:true={CDs.error}>
+        No record
+    </template>
+    
+</template>
